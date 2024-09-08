@@ -13,11 +13,11 @@ Composer - 2.7.6
 ## Rotas
 
 ### Requisições GET
-http://localhost:8000/api/usuarios/
-http://localhost:8000/api/usuarios/{cpf}
+1. http://localhost:8000/api/usuarios/
+2. http://localhost:8000/api/usuarios/{cpf}
 
 ### Requisições POST
-http://localhost:8000/api/usuarios/
+1. http://localhost:8000/api/usuarios/
 
 ### Documentação SWAGGER
-http://localhost:8000/api/documentation/
+1. http://localhost:8000/api/documentation/
