@@ -4,7 +4,7 @@ API Web de manipulação básica de usuários.
 
 ## Ferramentas
 
-Laravel - 11.16php
+Laravel - 11.16
 
 PHP - 8.2.12
 
