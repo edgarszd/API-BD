@@ -1,5 +1,7 @@
 # API USUÁRIOS
 
+API Web de manipulação básica de usuários.
+
 ## Ferramentas
 
 Laravel - 11.16php
