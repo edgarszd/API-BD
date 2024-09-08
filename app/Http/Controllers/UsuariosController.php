@@ -10,7 +10,7 @@ use Exception;
  *  @OA\Info(
  *      title="API Documentation",
  *      version="1.0",
- *      description="API Usuários"
+ *      description="Documentação da API Usuários"
  * )
  * 
  *  @OA\Server(url="http://localhost:8000")
@@ -25,7 +25,7 @@ class UsuariosController extends Controller
      *      path="/api/usuarios",
      *      tags={"Usuários"},
      *      summary="Listar todos os usuários",
-     *      description="Retorna a lista de usuários",
+     *      description="Retorna a lista de usuários.",
      *      @OA\Response(
      *          response=200,
      *          description="OK"
@@ -38,14 +38,19 @@ class UsuariosController extends Controller
 
     /**
      * @OA\Get(
-     *     path="api/usuario/{cpf}",
+     *     path="/api/usuarios/{cpf}",
      *     tags={"Usuários"},
      *     summary="Buscar um usuário pelo CPF",
+     *     description="Retorna as informações de um usuário baseado no CPF fornecido.",
      *     @OA\Parameter(
      *         name="cpf",
      *         in="path",
      *         required=true,
-     *         @OA\Schema(type="integer")
+     *         @OA\Schema(
+     *              type="integer",
+     *              example=12345678900
+     *         ),
+     *         description="CPF do usuário a ser buscado"
      *     ),
      *     @OA\Response(
      *         response=200,
@@ -68,16 +73,17 @@ class UsuariosController extends Controller
 
     /**
      * @OA\Post(
-     *     path="api/usuario",
+     *     path="/api/usuarios",
      *     tags={"Usuários"},
      *     summary="Cadastrar um novo usuário",
+     *     description="Realiza o cadastro de um novo usuário.",
      *     @OA\RequestBody(
      *         required=true,
      *         @OA\JsonContent(
      *             required={"cpf", "nome", "data_nascimento"},
-     *             @OA\Property(property="cpf", type="integer"),
-     *             @OA\Property(property="nome", type="string"),
-     *             @OA\Property(property="data_nascimento", type="string", format="date")
+     *             @OA\Property(property="cpf", type="unsignedBigInteger", example=12345678900),
+     *             @OA\Property(property="nome", type="string", example="Name"),
+     *             @OA\Property(property="data_nascimento", type="string", format="date", example="2000-01-01")
      *         )
      *     ),
      *     @OA\Response(
